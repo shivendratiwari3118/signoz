@@ -180,6 +180,7 @@ clickhouse:
     # -- Access Modes for persistent volume
     accessModes:
       - ReadWriteOnce
+    storageClassName: standard
 
     # -- Persistent Volume size
     size: 20Gi

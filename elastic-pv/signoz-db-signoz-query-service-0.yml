@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: signoz-db-signoz-query-service-0
+  #namespace: monitoring
+  labels:
+    type: local
+spec:
+  storageClassName: standard
+  capacity:
+    storage: 1000Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/signoz-db-signoz-query-service-0"
+  claimRef:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    namespace: default
+    name: signoz-db-signoz-query-service-0
